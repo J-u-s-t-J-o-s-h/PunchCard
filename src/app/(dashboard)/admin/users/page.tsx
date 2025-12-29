@@ -1,5 +1,6 @@
 
 import { createClient } from '@/utils/supabase/server'
+import { updateUserRole } from './actions'
 
 export default async function UsersPage() {
     const supabase = await createClient()
@@ -40,7 +41,14 @@ export default async function UsersPage() {
                                     {new Date(person.created_at).toLocaleDateString()}
                                 </td>
                                 <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <button className="text-indigo-600 hover:text-indigo-900">Edit</button>
+                                    <form action={async () => {
+                                        'use server'
+                                        await updateUserRole(person.id, person.role)
+                                    }}>
+                                        <button className="text-indigo-600 hover:text-indigo-900">
+                                            {person.role === 'admin' ? 'Revoke Admin' : 'Make Admin'}
+                                        </button>
+                                    </form>
                                 </td>
                             </tr>
                         ))}
