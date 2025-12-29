@@ -26,18 +26,20 @@ export async function createSite(formData: FormData) {
 
     if (error) {
         console.error(error)
-        return { error: 'Failed to create site' }
+        return
     }
 
     revalidatePath('/admin/sites')
-    return { success: true }
 }
 
 export async function deleteSite(siteId: string) {
     const supabase = await createClient()
     const { error } = await supabase.from('job_sites').delete().eq('id', siteId)
 
-    if (error) return { error: 'Failed' }
+    if (error) {
+        console.error(error)
+        return
+    }
     revalidatePath('/admin/sites')
-    return { success: true }
 }
+
