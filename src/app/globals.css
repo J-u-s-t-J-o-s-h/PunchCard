@@ -3,40 +3,50 @@
 @tailwind utilities;
 
 :root {
-  --background: #fdfdfd;
-  --foreground: #0a0a0a;
+  --background: #f8fafc;
+  /* Slate 50 */
+  --foreground: #0f172a;
+  /* Slate 900 */
 
   /* Modern Indigo Palette */
   --primary: #4f46e5;
   --primary-foreground: #ffffff;
 
-  --muted: #f4f4f5;
-  --muted-foreground: #71717a;
+  --muted: #f1f5f9;
+  /* Slate 100 */
+  --muted-foreground: #64748b;
+  /* Slate 500 */
 
   --card: #ffffff;
-  --card-foreground: #0a0a0a;
+  --card-foreground: #0f172a;
 
-  --border: #e4e4e7;
-  --input: #e4e4e7;
+  --border: #e2e8f0;
+  /* Slate 200 */
+  --input: #e2e8f0;
   --ring: #4f46e5;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #09090b;
-    --foreground: #fafafa;
+    --background: #020617;
+    /* Slate 950 */
+    --foreground: #f8fafc;
+    /* Slate 50 */
 
     --primary: #6366f1;
     --primary-foreground: #ffffff;
 
-    --muted: #27272a;
-    --muted-foreground: #a1a1aa;
+    --muted: #1e293b;
+    /* Slate 800 */
+    --muted-foreground: #94a3b8;
+    /* Slate 400 */
 
-    --card: #09090b;
-    --card-foreground: #fafafa;
+    --card: #0f172a;
+    /* Slate 900 */
+    --card-foreground: #f8fafc;
 
-    --border: #27272a;
-    --input: #27272a;
+    --border: #1e293b;
+    --input: #1e293b;
     --ring: #6366f1;
   }
 }
