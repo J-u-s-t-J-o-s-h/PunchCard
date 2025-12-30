@@ -44,7 +44,7 @@ export default async function DashboardLayout({
                                     My Dashboard
                                 </Link>
                                 {isAdmin && (
-                                    <Link href="/admin" className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-indigo-400 hover:border-indigo-300 hover:text-indigo-300">
+                                    <Link href="/admin" className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-[var(--primary)] hover:border-orange-500 hover:text-orange-400">
                                         Admin Panel
                                     </Link>
                                 )}
@@ -52,7 +52,7 @@ export default async function DashboardLayout({
                         </div>
                         <div className="flex items-center gap-4">
                             {isAdmin && (
-                                <span className="inline-flex items-center rounded-md bg-indigo-500/10 px-2 py-1 text-xs font-medium text-indigo-400 ring-1 ring-inset ring-indigo-500/20">Admin</span>
+                                <span className="inline-flex items-center rounded-md bg-orange-500/10 px-2 py-1 text-xs font-medium text-[var(--primary)] ring-1 ring-inset ring-orange-500/20">Admin</span>
                             )}
                             <form action={signOut}>
                                 <button className="text-sm font-semibold leading-6 text-slate-300 hover:text-white transition">
