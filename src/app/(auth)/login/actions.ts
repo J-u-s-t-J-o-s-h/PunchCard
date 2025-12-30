@@ -40,7 +40,7 @@ export async function signup(formData: FormData) {
     const password = formData.get('password') as string
     const fullName = formData.get('fullName') as string
 
-    const { error } = await supabase.auth.signUp({
+    const { data, error } = await supabase.auth.signUp({
         email,
         password,
         options: {
@@ -55,10 +55,14 @@ export async function signup(formData: FormData) {
         return redirect(`/login?message=${encodeURIComponent(error.message)}`)
     }
 
+    if (data.user && !data.session) {
+        return redirect('/login?message=Account created! Please check your email to confirm.')
+    }
+
     const { data: profile } = await supabase
         .from('profiles')
         .select('role')
-        .eq('id', (await supabase.auth.getUser()).data.user?.id)
+        .eq('id', data.user?.id)
         .single()
 
     const role = profile?.role || 'employee'
