@@ -1,4 +1,3 @@
-@import "@/styles/index.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,17 +5,17 @@
 :root {
   --background: #fdfdfd;
   --foreground: #0a0a0a;
-  
+
   /* Modern Indigo Palette */
   --primary: #4f46e5;
   --primary-foreground: #ffffff;
-  
+
   --muted: #f4f4f5;
   --muted-foreground: #71717a;
-  
+
   --card: #ffffff;
   --card-foreground: #0a0a0a;
-  
+
   --border: #e4e4e7;
   --input: #e4e4e7;
   --ring: #4f46e5;
@@ -26,16 +25,16 @@
   :root {
     --background: #09090b;
     --foreground: #fafafa;
-    
+
     --primary: #6366f1;
     --primary-foreground: #ffffff;
-    
+
     --muted: #27272a;
     --muted-foreground: #a1a1aa;
-    
+
     --card: #09090b;
     --card-foreground: #fafafa;
-    
+
     --border: #27272a;
     --input: #27272a;
     --ring: #6366f1;
