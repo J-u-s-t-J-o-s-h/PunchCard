@@ -5,14 +5,14 @@ export default function Home() {
     <div className="bg-slate-50">
       {/* Header */}
       <header className="absolute inset-x-0 top-0 z-50">
-        <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <nav className="flex items-center justify-between p-6 lg:px-8 bg-slate-900" aria-label="Global">
           <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5 text-2xl font-bold text-indigo-600">
+            <a href="#" className="-m-1.5 p-1.5 text-2xl font-bold text-white">
               CrewClock
             </a>
           </div>
           <div className="flex flex-1 justify-end">
-            <Link href="/login" className="text-sm font-semibold leading-6 text-gray-900">
+            <Link href="/login" className="text-sm font-semibold leading-6 text-white hover:text-indigo-400 transition">
               Log in <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>

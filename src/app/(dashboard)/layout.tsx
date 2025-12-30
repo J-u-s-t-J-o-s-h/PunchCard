@@ -29,22 +29,22 @@ export default async function DashboardLayout({
     }
 
     return (
-        <div className="min-h-screen bg-gray-100">
-            <nav className="bg-white shadow-sm border-b border-gray-200">
+        <div className="min-h-screen bg-[var(--background)]">
+            <nav className="bg-slate-900 shadow-sm border-b border-slate-800">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="flex h-16 justify-between">
                         <div className="flex">
                             <div className="flex flex-shrink-0 items-center">
-                                <Link href="/" className="text-xl font-bold text-indigo-600 flex items-center gap-2">
+                                <Link href="/" className="text-xl font-bold text-white flex items-center gap-2">
                                     CrewClock
                                 </Link>
                             </div>
                             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-                                <Link href="/employee" className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700">
+                                <Link href="/employee" className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-slate-300 hover:border-slate-400 hover:text-white">
                                     My Dashboard
                                 </Link>
                                 {isAdmin && (
-                                    <Link href="/admin" className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-indigo-600 hover:border-indigo-300 hover:text-indigo-800">
+                                    <Link href="/admin" className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-indigo-400 hover:border-indigo-300 hover:text-indigo-300">
                                         Admin Panel
                                     </Link>
                                 )}
@@ -52,10 +52,10 @@ export default async function DashboardLayout({
                         </div>
                         <div className="flex items-center gap-4">
                             {isAdmin && (
-                                <span className="inline-flex items-center rounded-md bg-purple-50 px-2 py-1 text-xs font-medium text-purple-700 ring-1 ring-inset ring-purple-700/10">Admin</span>
+                                <span className="inline-flex items-center rounded-md bg-indigo-500/10 px-2 py-1 text-xs font-medium text-indigo-400 ring-1 ring-inset ring-indigo-500/20">Admin</span>
                             )}
                             <form action={signOut}>
-                                <button className="text-sm font-semibold leading-6 text-gray-900 hover:text-red-600 transition">
+                                <button className="text-sm font-semibold leading-6 text-slate-300 hover:text-white transition">
                                     Sign out
                                 </button>
                             </form>

@@ -28,10 +28,10 @@ export default async function EmployeePage() {
 
     return (
         <div className="flex flex-col items-center">
-            <h1 className="text-2xl font-bold text-gray-900 mb-2">Hello, {profile?.full_name || 'Crew Member'}</h1>
-            <p className="text-gray-500 mb-6">Ready to work?</p>
+            <h1 className="text-2xl font-bold text-[var(--foreground)] mb-2">Hello, {profile?.full_name || 'Crew Member'}</h1>
+            <p className="text-[var(--muted-foreground)] mb-6">Ready to work?</p>
 
-            <div className="w-full max-w-md bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+            <div className="w-full max-w-md bg-[var(--card)] rounded-xl shadow-sm border border-[var(--border)] p-6">
                 <ClockWidget
                     isClockedIn={!!activeEntry}
                     lastEntryTime={activeEntry?.clock_in}
@@ -40,7 +40,7 @@ export default async function EmployeePage() {
 
             {/* Recent Activity */}
             <div className="mt-8 w-full max-w-md">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Who is Working?</h3>
+                <h3 className="text-lg font-semibold text-[var(--foreground)] mb-4">Who is Working?</h3>
                 <TeamStatus />
             </div>
         </div>
